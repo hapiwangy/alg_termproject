@@ -50,8 +50,8 @@ model.compile(loss='categorical_crossentropy', optimizer = 'adam', metrics = ['a
 
 datapath = os.getcwd()
 
-data_train_x, data_train_y = dwd.i_data.data_preprocess(datapath + "\\" + "train_image")
-data_test_x , data_test_y = dwd.i_data.data_preprocess(datapath + "\\" + "test_image")
+data_train_x, data_train_y = dwd.i_data.data_preprocess_CNN(datapath + "\\" + "train_image")
+data_test_x , data_test_y = dwd.i_data.data_preprocess_CNN(datapath + "\\" + "test_image")
 # 使用資料進行訓練
 train_history = model.fit(data_train_x, data_train_y, 
                         batch_size=32, epochs = 150, 
